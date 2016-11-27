@@ -1,0 +1,250 @@
+/*Style for Mario Pizza Application
+*Author:
+*Mariusz Szydlowski
+*R00105234
+*/
+/*Create backround for whole page */
+html{
+ 	background-color: #E6B7E1;
+				
+}
+/*Create style box for different browser , before and after access*/
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*Create style for headers : eg. size and and layout */
+header {
+	
+ 	color: #D01A1A; 
+  	font-size: 31px;
+  	text-align: center;
+  	font-style: normal;
+  	border-radius: 5px;
+  	width: 100%;
+  	font-family: serif;
+  	
+}
+/* Create style for id: h1_div : border and background */ 
+#h1_div{
+	border: 1px solid;
+  	border-width: 1px 1px 3px;
+ 	border-radius:6px, 6px, 6px, 6px;
+/*   	box-shadow: 10px 5px 5px #D01A1A; */
+  	background: linear-gradient(#B87CB1, #EEEEEC);
+}
+/* Create style for h1 text */
+h1{
+	color:#fff;
+	padding:1px;
+	margin: 1px;
+	text-align: left;
+	text-shadow: 10px 5px 5px #AC2BC1;
+	font-weight: bold;
+}
+/* Create style for h3 */
+h3 {
+	padding: 3px 10px 3px 10px;
+	margin: 0px 10px 1px 10px;
+	text-shadow: -2px 3px 2px #D01A1A;
+	font-style: italic;
+	font-style: oblique;
+	color: #AC2BC1;
+}
+/* Create style for body */
+body {
+  font-family: 'Nunito', sans-serif;
+  color:#8AE234;
+}
+/* Create style for form: size, border, bacground */
+form {
+  max-width: 35%;
+	
+  padding: 10px 2px;
+  background: #8AE234;
+  border-radius: 18px;
+	font-size: 30px;
+} 
+
+/* Create style for p */
+p{
+  	margin: 0 0 0px 0;
+  	text-align: center;
+  	list-style-type:none;
+	color:#0071A4;
+	text-align: center;
+	text-shadow: 1px 1px #0000ff;
+	font-family: Arial; 
+}
+
+input {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 5px;
+  <!--width: %;-->
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 1px;
+} 
+#selectOptionSize {
+	max-width: 5%; 
+	text-decoration:none;
+	width: 10%; 
+	display:inline-block; 
+	 
+	
+}
+.clolr_class, .upgrades_class{
+  display: inline; 
+    width: 10%;
+}
+input[type=button],[type=submit] {
+	width: 10%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius:5px;
+	cursor: pointer;
+}
+
+
+input[type=button]:hover,[type=submit]:hover {
+	background-color: #45a049;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input[type=button]:active,[type=submit]:active {
+	decoration:none;
+	position:relative;
+	top:2px;
+	
+	-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {background-color: red;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {background-color: red;}
+}
+
+
+button {
+	decoration: none;
+  	padding: 19px 39px 18px 39px;
+  	color: #D3D7CF;
+  	background-color: #204A87;
+  	font-size: 25px;
+  	text-align: center;
+  	font-style: normal;
+  	border-radius: 5px;
+  	width: 15%; 
+  	border: 1px solid #3ac162;
+  	border-width: 1px 1px 3px;
+  	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  	margin-bottom: 10px;
+  	opacity:0.9;
+  	cursor: pointer;
+  
+}
+
+
+button:hover {
+	opacity:1.0;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button:active {
+	decoration:null;
+	text-decoration:null; 
+	position:relative;
+	top:2px;
+	
+	-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove2 5s infinite;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove2 {
+    50% {background-color: blue;}
+}
+
+/* Standard syntax */
+@keyframes mymove2 {
+    50% {background-color: blue;}
+}
+
+
+th {
+    height: 50px;
+  	background-color: #F5A100;
+  	padding-left: 10px;
+	padding-right: 10px;
+  	/* overflow-y: hidden;  */ 
+  	color: #101877;
+}
+
+tr:nth-child(odd){
+	background-color: #FFFFFF;
+}
+tr:hover {
+	background-color:#C6F971;
+
+}
+
+
+@media screen and (min-width: 780px) {
+  form {
+    max-width: 780px;
+  }
+
+}
+
+label {
+	text-align : center;
+	line-height : 10px;
+	color : gray;
+	width:100%;
+	display: inline-block; 
+	font-size: 28px;    
+}
+#image {
+	float: right;
+  border-radius: 50%;
+  max-width: 100%;
+  max-height: 30%;
+  
+}
+#id_table {
+	float: left;
+}
+.orderDetails {
+  	float: left;
+	display: inline-block; 
+  
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

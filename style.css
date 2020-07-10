@@ -5,8 +5,8 @@
 */
 /*Create backround for whole page */
 html{
- 	background-color: #E6B7E1;
-				
+ /*	background-color: #E6B7E1;*/
+	background-image: url(pizzaBackground.jpg);			
 }
 /*Create style box for different browser , before and after access*/
 *,
@@ -35,7 +35,7 @@ header {
   	border-width: 1px 1px 3px;
  	border-radius:6px, 6px, 6px, 6px;
 /*   	box-shadow: 10px 5px 5px #D01A1A; */
-  	background: linear-gradient(#B87CB1, #EEEEEC);
+  	background: linear-gradient(red, #EEEEEC);
 }
 /* Create style for h1 text */
 h1{
@@ -60,14 +60,13 @@ body {
   font-family: 'Nunito', sans-serif;
   color:#8AE234;
 }
-/* Create style for form: size, border, bacground */
+/* Create style for form: size, border, background */
 form {
-  max-width: 35%;
-	
+  max-width: 55%;
   padding: 10px 2px;
-  background: #8AE234;
+  background: rgba(53, 95, 85, 0.904);
   border-radius: 18px;
-	font-size: 30px;
+  font-size: 30px;
 } 
 
 /* Create style for p */
@@ -89,7 +88,7 @@ input {
   margin: 0;
   outline: 0;
   padding: 5px;
-  <!--width: %;-->
+ /* <!--width: %;-->*/
   background-color: #e8eeef;
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
@@ -206,7 +205,8 @@ tr:hover {
 
 @media screen and (min-width: 780px) {
   form {
-    max-width: 780px;
+	  
+    max-width: 1780px;
   }
 
 }

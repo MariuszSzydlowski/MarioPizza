@@ -28,365 +28,361 @@
 			<button id="drink" class="navButton" name="drink">Drink</button>
 			<button id="dessert" class="navButton" name="dessert">Dessert</button>
 		</nav>
-		<header>
-			<div id="image"></div>
-			<p class="orderDetails" id="sizePizza"></p><br>
-			<p class="orderDetails" id="sosPizza"></p><br>
-			<p class="orderDetails" id="topingsPizza"></p>
-			<form id="myForm" action="http://atlantis.cit.ie/displayvalues.php">
-				<div id="pizzaOption">
-					<p>
-						<label>Pizza:</label>
-					<p>
-						<input id="small" class="pizzaSize" name="pizzaSize" type="radio" value="9,99">Small &euro;9,99
-						<input id="medium" class="pizzaSize" name="pizzaSize" type="radio" value="12,99">Medium
-						&euro;12,99
-						<input id="large" class="pizzaSize" name="pizzaSize" type="radio" value="15,99">Large
-						&euro;15,99
-						<label id="pizza_size_price">&euro;</label>
-					</p>
-					<label>Sos:</label>
-					<p>
-						<input id="tomato" class="pizzaSos" name="pizzaSos" type="radio" value="tomato">Tomato
-						<input id="bbq" class="pizzaSos" name="pizzaSos" type="radio" value="bbq">BBQ
-						<input id="tomatogarlic" class="pizzaSos" name="pizzaSos" type="radio"
-							value="tomatogarlic">Tomato & Garlic
-					</p>
-					<label>Topping:</label>
-					<p>
-						<label id="topping_price_for_size"></label>
-						<input id="pepperoni" name="pepperoni" type="checkbox" value="Pepperoni">Pepperoni
-						<input id="ham" name="ham" type="checkbox" value="Ham">Ham
-						<input id="onion" name="onions" type="checkbox" value="Onions">Onions
-					</p>
+	</header>
+	<section>
+		<div id="image"></div>
+		<p class="orderDetails" id="sizePizza"></p><br>
+		<p class="orderDetails" id="sosPizza"></p><br>
+		<p class="orderDetails" id="topingsPizza"></p>
+		<form id="myForm" action="http://atlantis.cit.ie/displayvalues.php">
+			<div id="pizzaOption">
+				<p>
+					<label>Pizza:</label>
+				<p>
+					<input id="small" class="pizzaSize" name="pizzaSize" type="radio" value="9,99">Small &euro;9,99
+					<input id="medium" class="pizzaSize" name="pizzaSize" type="radio" value="12,99">Medium
+					&euro;12,99
+					<input id="large" class="pizzaSize" name="pizzaSize" type="radio" value="15,99">Large
+					&euro;15,99
+					<label id="pizza_size_price">&euro;</label>
+				</p>
+				<label>Sos:</label>
+				<p>
+					<input id="tomato" class="pizzaSos" name="pizzaSos" type="radio" value="tomato">Tomato
+					<input id="bbq" class="pizzaSos" name="pizzaSos" type="radio" value="bbq">BBQ
+					<input id="tomatogarlic" class="pizzaSos" name="pizzaSos" type="radio" value="tomatogarlic">Tomato &
+					Garlic
+				</p>
+				<label>Topping:</label>
+				<p>
+					<label id="topping_price_for_size"></label>
+					<input id="pepperoni" name="pepperoni" type="checkbox" value="Pepperoni">Pepperoni
+					<input id="ham" name="ham" type="checkbox" value="Ham">Ham
+					<input id="onion" name="onions" type="checkbox" value="Onions">Onions
+				</p>
+				<label>Total price:</label>
+				<label id="total_price_for_pizza">&euro;</label><br>
+				<button id="pizzaSubmitButton" type="button">Submit</button>
+				<button id="pizzaResetButton" type="button">Reset</button>
+				</p>
+			</div>
+
+			<div id="sideOption">
+				<p>
+					<label id="clolrLabel">Sides:</label>
+				</p>
+				<p>
+					<label>Chicken Stripers:</label>
+					<select id="selectOptionSize" name="size" onchange="">
+						<option disabled>Chicken Stripers:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label id="stripers">x &euro;6</label>
+					<label id="stripers_prices">= &euro;</label>
+				</p>
+				<p>
+					<label>Chicken Wings:</label>
+					<select id="selectOptionSize" name="size" onchange="">
+						<option disabled>Chicken Wings:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label id="wings">x &euro;6</label>
+					<label id="wings_prices">= &euro;</label>
+				</p>
+				<p>
+					<label>Garlic Pizza Bread:</label>
+					<select id="selectOptionSize" name="size" onchange="">
+						<option disabled>Garlic Pizza Bread:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label id="garlic">x &euro;4</label>
+					<label id="garlic_prices">= &euro;</label>
+				</p>
+				<p>
+					<label>Potato Wedges:</label>
+					<select id="selectOptionSize" name="size" onchange="">
+						<option disabled>Potato Wedges:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label id="pwedges">x &euro;4</label>
+					<label id="pwedges_prices">= &euro;</label>
+				</p>
+				<p>
 					<label>Total price:</label>
-					<label id="total_price_for_pizza">&euro;</label><br>
-					<button id="pizzaSubmitButton" type="button">Submit</button>
-					<button id="pizzaResetButton" type="button">Reset</button>
-					</p>
-				</div>
+					<label id="total_price_for_sides">&euro;</label>
+					<button type="button" onclick="getAddOns()">Submit</button>
+				</p>
+			</div>
+			<div id="drinkOption">
+				<label>Drinks:</label>
+				<p>
+					<label>1.5ltr bottle &euro;2.5</label>
+				</p>
+				<p>
+					<label>Coca-Cola:</label>
+					<select id="selectOptionColaBl" name="colabl" onchange="">
+						<option disabled>Coca-Cola:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
 
-				<div id="sideOption">
-					<p>
-						<label id="clolrLabel">Sides:</label>
-					</p>
-					<p>
-						<label>Chicken Stripers:</label>
-						<select id="selectOptionSize" name="size" onchange="">
-							<option disabled>Chicken Stripers:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label id="stripers">x &euro;6</label>
-						<label id="stripers_prices">= &euro;</label>
-					</p>
-					<p>
-						<label>Chicken Wings:</label>
-						<select id="selectOptionSize" name="size" onchange="">
-							<option disabled>Chicken Wings:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label id="wings">x &euro;6</label>
-						<label id="wings_prices">= &euro;</label>
-					</p>
-					<p>
-						<label>Garlic Pizza Bread:</label>
-						<select id="selectOptionSize" name="size" onchange="">
-							<option disabled>Garlic Pizza Bread:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label id="garlic">x &euro;4</label>
-						<label id="garlic_prices">= &euro;</label>
-					</p>
-					<p>
-						<label>Potato Wedges:</label>
-						<select id="selectOptionSize" name="size" onchange="">
-							<option disabled>Potato Wedges:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label id="pwedges">x &euro;4</label>
-						<label id="pwedges_prices">= &euro;</label>
-					</p>
-					<p>
-						<label>Total price:</label>
-						<label id="total_price_for_sides">&euro;</label>
-						<button type="button" onclick="getAddOns()">Submit</button>
-					</p>
-				</div>
-				<div id="drinkOption">
-					<label>Drinks:</label>
-					<p>
-						<label>1.5ltr bottle &euro;2.5</label>
-					</p>
-					<p>
-						<label>Coca-Cola:</label>
-						<select id="selectOptionColaBl" name="colabl" onchange="">
-							<option disabled>Coca-Cola:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
+					<label>Fanta:</label>
+					<select id="selectOptionFantaBl" name="fantabl" onchange="">
+						<option disabled>Fanta 1.5ltr bottle:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
 
-						<label>Fanta:</label>
-						<select id="selectOptionFantaBl" name="fantabl" onchange="">
-							<option disabled>Fanta 1.5ltr bottle:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
+					<label>Sprite:</label>
+					<select id="selectOptionSpriteBl" name="spritebl" onchange="">
+						<option disabled>Sprite 1.5ltr bottle:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</p>
+				<p>
+					<label>330ml can &euro;1.5</label>
+				</p>
+				<p>
+					<label>Coca-Cola:</label>
+					<select id="selectOptionColaCan" name="colacan" onchange="">
+						<option disabled>Coca-Cola 330ml can:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
 
-						<label>Sprite:</label>
-						<select id="selectOptionSpriteBl" name="spritebl" onchange="">
-							<option disabled>Sprite 1.5ltr bottle:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-					</p>
-					<p>
-						<label>330ml can &euro;1.5</label>
-					</p>
-					<p>
-						<label>Coca-Cola:</label>
-						<select id="selectOptionColaCan" name="colacan" onchange="">
-							<option disabled>Coca-Cola 330ml can:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
+					<label>Fanta:</label>
+					<select id="selectOptionFantaCan" name="fantacan" onchange="">
+						<option disabled>Fanta 330ml can:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
 
-						<label>Fanta:</label>
-						<select id="selectOptionFantaCan" name="fantacan" onchange="">
-							<option disabled>Fanta 330ml can:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
+					<label>Sprite:</label>
+					<select id="selectOptionSpriteCan" name="spritecan" onchange="">
+						<option disabled>Sprite 330ml can:</option>
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</p>
+				<p>
+					<label>Total price:</label>
+					<label id="total_price_for_drinks">&euro;</label>
+					<button type="button" onclick="getAddOns()">Submit</button>
+				</p>
+			</div>
+			<div id="dessertOption">
+				<p>
+					<label id="clolrLabel">Dessert:</label>
+				</p>
+				<p>
+					<label>Cookies:</label>
+					<select id="selectOptionCookies" name="cookies" onchange="">
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label id="cookies">x &euro;4</label>
+					<label id="cookies_prices">= &euro;</label>
+				</p>
+				<p>
+					<label>Chocolate Brownies:</label>
+					<select id="selectOptionChocolateB" name="chocolateB" onchange="">
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label id="chocolateB">x &euro;4</label>
+					<label id="chocolateB_prices">= &euro;</label>
+				</p>
+				<p>
+					<label>Ice Cream:</label>
+					<label>150ml tub &euro;4.00:</label>
+					<label>Vanila:</label>
+					<select id="selectOptionIceV" name="vanila" onchange="">
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label>Strawberry:</label>
+					<select id="selectOptionIceS" name="strawberry" onchange="">
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label>Chocolate:</label>
+					<select id="selectOptionIceC" name="chocolate" onchange="">
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
 
-						<label>Sprite:</label>
-						<select id="selectOptionSpriteCan" name="spritecan" onchange="">
-							<option disabled>Sprite 330ml can:</option>
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-					</p>
-					<p>
-						<label>Total price:</label>
-						<label id="total_price_for_drinks">&euro;</label>
-						<button type="button" onclick="getAddOns()">Submit</button>
-					</p>
-				</div>
-				<div id="dessertOption">
-					<p>
-						<label id="clolrLabel">Dessert:</label>
-					</p>
-					<p>
-						<label>Cookies:</label>
-						<select id="selectOptionCookies" name="cookies" onchange="">
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label id="cookies">x &euro;4</label>
-						<label id="cookies_prices">= &euro;</label>
-					</p>
-					<p>
-						<label>Chocolate Brownies:</label>
-						<select id="selectOptionChocolateB" name="chocolateB" onchange="">
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label id="chocolateB">x &euro;4</label>
-						<label id="chocolateB_prices">= &euro;</label>
-					</p>
-					<p>
-						<label>Ice Cream:</label>
-						<label>150ml tub &euro;4.00:</label>
-						<label>Vanila:</label>
-						<select id="selectOptionIceV" name="vanila" onchange="">
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label>Strawberry:</label>
-						<select id="selectOptionIceS" name="strawberry" onchange="">
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label>Chocolate:</label>
-						<select id="selectOptionIceC" name="chocolate" onchange="">
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
+					<label id="smallIce_prices">= &euro;</label>
+				</p>
+				<p>
+					<label>Ice Cream:</label>
+					<label>500ml tub &euro;6.50:</label>
+					<label>Vanila:</label>
+					<select id="selectOptionIceVL" name="vanilaL" onchange="">
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label>Strawberry:</label>
+					<select id="selectOptionIceSL" name="strawberryL" onchange="">
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<label>Chocolate:</label>
+					<select id="selectOptionIceCL" name="chocolateL" onchange="">
+						<option selected="selected">0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
 
-						<label id="smallIce_prices">= &euro;</label>
-					</p>
-					<p>
-						<label>Ice Cream:</label>
-						<label>500ml tub &euro;6.50:</label>
-						<label>Vanila:</label>
-						<select id="selectOptionIceVL" name="vanilaL" onchange="">
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label>Strawberry:</label>
-						<select id="selectOptionIceSL" name="strawberryL" onchange="">
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-						<label>Chocolate:</label>
-						<select id="selectOptionIceCL" name="chocolateL" onchange="">
-							<option selected="selected">0</option>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
+					<label id="smallIce_prices">= &euro;</label>
+				</p>
+				<p>
+					<label>Total price:</label>
+					<label id="total_price_for_sides">&euro;</label>
+					<button type="button" onclick="">Submit</button>
+				</p>
+			</div>
 
-						<label id="smallIce_prices">= &euro;</label>
-					</p>
-					<p>
-						<label>Total price:</label>
-						<label id="total_price_for_sides">&euro;</label>
-						<button type="button" onclick="">Submit</button>
-					</p>
-				</div>
+			<div id="customerDetails">
+				<form action="">
+					Name:<br>
+					<input id="customerName" type="test" name="customerName" valeu="">
+					<br>
+					Tel:<br>
+					<input id="customerTel" type="text" name="customerTel" value="">
+					<br>
+					Address:<br>
+					<input id="customerAddress" type="text" name="customerAddress" value="">
+					<br>
+					Email:<br>
+					<input id="customerEmail" type="email" name="customerEmail" value="">
+					<br>
+					<input class="kindOfReception" name="kindOfReception" type="radio" value="collection">Collection
+					<input class="kindOfReception" name="kindOfReception" type="radio" value="delivery">Delivery
 
-				<div id="customerDetails">
-					<form action="">
-						Name:<br>
-						<input id="customerName" type="test" name="customerName" valeu="">
-						<br>
-						Tel:<br>
-						<input id="customerTel" type="text" name="customerTel" value="">
-						<br>
-						Address:<br>
-						<input id="customerAddress" type="text" name="customerAddress" value="">
-						<br>
-						Email:<br>
-						<input id="customerEmail" type="email" name="customerEmail" value="">
-						<br>
-						<input class="kindOfReception" name="kindOfReception" type="radio" value="collection">Collection
-						<input class="kindOfReception" name="kindOfReception" type="radio" value="delivery">Delivery
-
-				</div>
+			</div>
 
 
+			<div>
+				<table id="id_table" border="1">
+					<caption>Order details</caption>
+					<!-- tag should be plased after the  <table> // NAme of table-->
+					<thead>
+						<!-- The <thead> section appears first in the table -->
+						<tr>
+							<!-- The <tr> inserts a table row -->
+							<th>Customer</th> <!-- insert a heading cell -->
+							<th>User Choises</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<!-- The <tfood> section appears last in the table -->
+						<tr>
+							<th>Total</th> <!-- insert a data cell -->
+							<th id="totalPrice" colspan="2">&euro; </th>
+						<tr>
+					</tfoot>
+					<tbody>
+						<tr id="size">
+							<td>Pizza</td>
+							<td id="elPizza"></td>
+							<td id="elPizzaPrice">&euro;</td>
+						</tr>
+						<tr>
+							<td>Side</td>
+							<td id="tSide"></td>
+							<td id="tSidePrice">&euro;</td>
+						</tr>
+						<tr id="upgrades">
+							<td>Drinks</td>
+							<td id="tDrinks"></td>
+							<td id="tDrinksPrice">&euro;</td>
+						</tr>
+						<tr>
+							<td>Dessert</td>
+							<td id="tDessert"></td>
+							<td id="tDessertPrice">&euro;</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+	</section>
+	<article>
 
 
+	</article>
+	<aside>
 
+		<div>
+			<button id="calculateOrderButton" class="btn_cal_and_ord" type="button"
+				name="calculateTotal_button">Calculate Total</button>
+			<button id="orderNowButton" type="button" class="btn_cal_and_ord">Order Now</button>
+			<button id="cancelOrderButton" type="button" class="btn_cal_and_ord">Cancel Order</button>
 
-				<section>
-					<div>
-						<table id="id_table" border="1">
-							<caption>Order details</caption>
-							<!-- tag should be plased after the  <table> // NAme of table-->
-							<thead>
-								<!-- The <thead> section appears first in the table -->
-								<tr>
-									<!-- The <tr> inserts a table row -->
-									<th>Customer</th> <!-- insert a heading cell -->
-									<th>User Choises</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tfoot>
-								<!-- The <tfood> section appears last in the table -->
-								<tr>
-									<th>Total</th> <!-- insert a data cell -->
-									<th id="totalPrice" colspan="2">&euro; </th>
-								<tr>
-							</tfoot>
-							<tbody>
-								<tr id="size">
-									<td>Pizza</td>
-									<td id="elPizza"></td>
-									<td id="elPizzaPrice">&euro;</td>
-								</tr>
-								<tr>
-									<td>Side</td>
-									<td id="tSide"></td>
-									<td id="tSidePrice">&euro;</td>
-								</tr>
-								<tr id="upgrades">
-									<td>Drinks</td>
-									<td id="tDrinks"></td>
-									<td id="tDrinksPrice">&euro;</td>
-								</tr>
-								<tr>
-									<td>Dessert</td>
-									<td id="tDessert"></td>
-									<td id="tDessertPrice">&euro;</td>
-								</tr>
-
-							</tbody>
-						</table>
-					</div>
-
-				</section>
-				<article>
-
-
-				</article>
-				<aside>
-
-					<div>
-						<button id="calculateOrderButton" class="btn_cal_and_ord" type="button"
-							name="calculateTotal_button">Calculate Total</button>
-						<button id="orderNowButton" type="button" class="btn_cal_and_ord">Order Now</button>
-						<button id="cancelOrderButton" type="button" class="btn_cal_and_ord">Cancel Order</button>
-
-					</div>
-				</aside>
-				<script src="js/jquery-1.11.0.js"></script>
-				<script src="js/calculate.js"></script>
+		</div>
+	</aside>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/calculate.js"></script>
 </body>
 
 </html>
